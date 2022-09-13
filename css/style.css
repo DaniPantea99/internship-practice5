@@ -117,10 +117,10 @@
     text-align: center;
 }
 
-.user__input {
-    /* position: relative; */
-    /* padding-bottom: 24px; */
-}
+/* .user__input {
+    position: relative;
+    padding-bottom: 24px;
+} */
 
 .user__input label {
     display: block;
