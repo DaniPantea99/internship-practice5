@@ -119,12 +119,12 @@
 
 .user__input {
     /* position: relative; */
-    padding-bottom: 24px;
+    /* padding-bottom: 24px; */
 }
 
 .user__input label {
     display: block;
-    padding-bottom: 8px;
+    padding: 14px 0 5px 0;
     font-size: 0.875rem;
     line-height: 1.25rem;
     text-transform: none;
@@ -187,6 +187,7 @@
 .birthdate {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .birthdate label {
@@ -199,7 +200,7 @@
     text-transform: none;
     letter-spacing: normal;
     font-weight: 700;
-    padding-bottom: 8px;
+    padding-top: 14px;
 }
 
 .user__input input[name="day"] {
@@ -210,11 +211,21 @@
     width: 115px;
 }
 
+/* .user__input input:valid[id="name"] ~ .profile-name {
+    display: none;
+} */
+
 .user__input select[name="month"] {
     width: 200px;
     color: #6a6a6a;
     appearance: none;
     background-color: transparent;
+}
+
+form:invalid[data-error="day"] ~ .error__msg__wrapper .error__msg[data-error="day"], 
+form:invalid[data-error="month"] ~ .error__msg__wrapper .error__msg[data-error="month"],
+form:invalid[data-error="year"] ~ .error__msg__wrapper .error__msg[data-error="year"] {
+    display: block;
 }
 
 .month__dropdown {
@@ -239,7 +250,7 @@
     text-transform: none;
     letter-spacing: normal;
     font-weight: 700;
-    padding-bottom: 8px;
+    padding: 14px 0 8px 0;
 }
 
 .gender label {
